@@ -1,0 +1,20 @@
+<template name="login">
+    <div class="login-page">
+        <span>
+            Hi! What is your name?<br>
+            <input id="name-box" type="text">
+            <br><br>
+            {{#if haveRoom}}
+                We found 1 pending game!<br>
+                Players:<br>
+                {{#each currentPlayers}}
+                {{name}}<br>
+                {{/each}}
+                <button class="btn btn-enter-game">Join room</button>
+            {{else}}
+                All games have started! Start a new room!
+                <button class="btn btn-enter-game">Click to create a room!</button>
+            {{/if}}
+        </span>
+    </div>
+</template>

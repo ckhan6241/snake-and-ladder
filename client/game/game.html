@@ -1,0 +1,37 @@
+<template name="game">
+    {{checkFinished}}
+    <div>
+        <table>
+            <tr>
+                <th>Turn</th>
+                <th>Player</th>
+                <th>Score</th>
+                <th>Status</th>
+            </tr>
+            {{#each players}}
+                <tr class={{#if isPlayer}}thisPlayer{{/if}}>
+                    <td>
+                        {{#if isPlayerTurn}}
+                            This player
+                        {{/if}}
+                    </td>
+                    <td>{{name}}</td>
+                    <td>{{score}}</td>
+                    <td>{{status}}</td>
+                </tr>
+            {{/each}}
+        </table>
+        <button class="btn btn-move">Roll</button>
+        <span> Move {{numberOfSteps}} steps  </span>
+        {{#if gameWaiting}}
+            <br><br>
+            {{#if isFirstPlayer}}
+            <i>**Click "Roll" if you want to start the game!<br>
+            Or wait for more players to join!</i>
+            {{else}}
+            <i>**We are still waiting for more players to join in, be patient!</i>
+            {{/if}}
+        {{/if}}
+    </div>
+</template>
+
