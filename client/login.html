@@ -12,9 +12,18 @@
                 {{/each}}
                 <button class="btn btn-enter-game">Join room</button>
             {{else}}
-                All games have started! Start a new room!
+                All games have started! Start a new room!<br>
                 <button class="btn btn-enter-game">Click to create a room!</button>
             {{/if}}
         </span>
+        <br><br>
+    </div>
+    <div class="rules">
+        Rules:<br>
+        1. Roll dice to move, increase your score from 0, first to 100 wins.<br>
+        2. You might encounter "ladder" at certain score, you will climb up to a higher score.<br>
+        3. You might encounter "snake" at certain score, you will slip down to a lower score.<br>
+        4. No players will be on the same score, if that happens the players will swap position.<br>
+        5. If your score exceeded 100, you will move backwards the amount exceeded.<br>
     </div>
 </template>
